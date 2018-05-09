@@ -1,3 +1,5 @@
 matlab.log
 model/*
 mc_result/*
+!mc_result/*README.md
+!model/*README.md

@@ -1,2 +1,4 @@
 log/*
 model/*
+!model/readme.md
+!log/*readme.md
