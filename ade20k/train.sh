@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+/home/tony/app/deeplab/deeplab-public-ver2/build/tools/caffe.bin train --solver=./config/deeplab_largeFOV/solver_train_v1_3.prototxt --gpu=0 --snapshot=./model/deeplab_largeFOV/train_iter_10000.solverstate
+#/home/tony/app/deeplab/deeplab-public-ver2/build/tools/caffe.bin train --solver=./config/deeplab_largeFOV/solver_train_v1_2.prototxt --gpu=0 --weights=./model/deeplab_largeFOV/train_iter_20000.caffemodel

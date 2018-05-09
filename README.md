@@ -1,3 +1,9 @@
+## Deeplab v2-ADE20K
+
+结合Deeplab v2和场景分类神经网络进行的场景相关的语义分割实验代码，源代码调整不多，主要是为了适应本地编译环境和cudnn库版本的更改。
+
+实验相关的代码更改主要在ade20k文件夹下和evaluation文件夹下
+
 ## DeepLab v2
 
 ### Introduction
