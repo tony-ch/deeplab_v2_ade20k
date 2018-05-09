@@ -1,7 +1,7 @@
 % compute the densecrf result (.bin) to png
 %
 
-addpath('/rmt/work/deeplabel/code/matlab/my_script');
+addpath('/home/tony/app/deeplab/deeplab-public-ver2/matlab/my_script');
 SetupEnv;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -11,13 +11,13 @@ if is_server
   if learn_crf
     post_folder = sprintf('post_densecrf_W%d_XStd%d_RStd%d_PosW%d_PosXStd%d_ModelType%d_Epoch%d', bi_w, bi_x_std, bi_r_std, pos_w, pos_x_std, model_type, epoch);
 
-    map_folder = fullfile('/rmt/work/deeplabel/exper', dataset, 'densecrf', 'res', feature_name, model_name, testset, feature_type, post_folder); 
+    map_folder = fullfile('/home/tony/app/deeplab', dataset, 'densecrf', 'res', feature_name, model_name, testset, feature_type, post_folder); 
 
-    save_root_folder = fullfile('/rmt/work/deeplabel/exper', dataset, 'res', feature_name, model_name, testset, feature_type, post_folder); ;
+    save_root_folder = fullfile('/home/tony/app/deeplab', dataset, 'res', feature_name, model_name, testset, feature_type, post_folder); ;
   else
     post_folder = sprintf('post_densecrf_W%d_XStd%d_RStd%d_PosW%d_PosXStd%d', bi_w, bi_x_std, bi_r_std, pos_w, pos_x_std);
 
-    map_folder = fullfile('/rmt/work/deeplabel/exper', dataset, 'res', feature_name, model_name, testset, feature_type, post_folder); 
+    map_folder = fullfile('/home/tony/app/deeplab', dataset, 'res', feature_name, model_name, testset, feature_type, post_folder); 
 
     save_root_folder = map_folder;
   end
@@ -30,7 +30,7 @@ map_dir = dir(fullfile(map_folder, '*.bin'));
 
 fprintf(1,' saving to %s\n', save_root_folder);
 
-if strcmp(dataset, 'voc12')
+if strcmp(dataset, 'voc2012')
   seg_res_dir = [save_root_folder '/results/VOC2012/'];
 elseif strcmp(dataset, 'coco')
   seg_res_dir = [save_root_folder, '/results/COCO2014/'];

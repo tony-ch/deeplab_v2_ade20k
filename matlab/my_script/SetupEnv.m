@@ -36,20 +36,20 @@ debug           = 0;   % if debug, show some results
 
 %
 % initial or default values for crf
-bi_w           = 5; 
-bi_x_std       = 50;
-bi_r_std       = 3;
+bi_w           = 4; 
+bi_x_std       = 49;
+bi_r_std       = 5;
 
 pos_w          = 3;
 pos_x_std      = 3;
 
 
 %
-dataset    = 'voc12';  %'voc12', 'coco'
+dataset    = 'voc2012';  %'voc12', 'coco'
 trainset   = 'train_aug';      % not used
 testset    = 'val';            %'val', 'test'
 
-model_name = 'vgg128_noup';
+model_name = 'deeplab_largeFOV';
 
 feature_name = 'features';
 feature_type = 'fc8'; % fc8 / crf

@@ -2,12 +2,12 @@
 %
 is_server = 1;
 
-dataset = 'coco';  %'coco', 'voc2012'
+dataset = 'voc2012';  %'coco', 'voc2012'
 
 if is_server
   if strcmp(dataset, 'voc2012')
-    img_folder  = '/rmt/data/pascal/VOCdevkit/VOC2012/JPEGImages'
-    save_folder = '/rmt/data/pascal/VOCdevkit/VOC2012/PPMImages';
+    img_folder  = '/home/tony/app/deeplab/VOC_aug/dataset/JPEGImages'
+    save_folder = '/home/tony/app/deeplab/VOC_aug/dataset/PPMImages';
   elseif strcmp(dataset, 'coco')
     img_folder  = '/rmt/data/coco/JPEGImages';
     save_folder = '/rmt/data/coco/PPMImages';
